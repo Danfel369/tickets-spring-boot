@@ -19,4 +19,4 @@ Verifica que tienes instalado:
 
 1. **Clonar el repositorio:**
    ```bash
-   git clone [https://github.com/tu-usuario/nombre-del-proyecto.git](https://github.com/tu-usuario/nombre-del-proyecto.git)
+   git clone https://github.com/Danfel369/tickets-spring-boot.git
