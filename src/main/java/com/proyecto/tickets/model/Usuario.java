@@ -1,5 +1,6 @@
 package com.proyecto.tickets.model;
 
+import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -9,18 +10,16 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Document(collection = "usuarios")
+@AllArgsConstructor
 @Data
 @Builder
-@AllArgsConstructor
 @NoArgsConstructor
 public class Usuario {
-
     @Id
-    private String id;
-
+    private ObjectId usuarioId;
     private String nombre;
     private String apellido;
-    private String correo; 
+    private String correo;
+    private Rol rol;
     private String fotoPerfil;
-
 }
