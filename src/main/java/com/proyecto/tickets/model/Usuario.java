@@ -20,6 +20,5 @@ public class Usuario {
     private String nombre;
     private String apellido;
     private String correo;
-    private Rol rol;
     private String fotoPerfil;
 }

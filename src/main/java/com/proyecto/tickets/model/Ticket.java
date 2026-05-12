@@ -29,8 +29,10 @@ public class Ticket {
     private String nombreCaso;
     private Estado estadoTicket;
     private Prioridad prioridadTicket;
-    private String creadoPor;
-    private String cerradoPor;
-    private String asignado;
+    private ObjectId creadoPorId;
+    private ObjectId cerradoPorId;
+    
+    
+    private ObjectId asignadoId;
 
 }
