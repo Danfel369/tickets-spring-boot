@@ -36,6 +36,7 @@ public class Ticket {
     
     @Indexed
     private Prioridad prioridadTicket;
+<<<<<<< HEAD
 
     @Indexed
     private ObjectId creadoPorId;
@@ -45,5 +46,12 @@ public class Ticket {
     
     @Indexed
     private ObjectId asignadoAId;
+=======
+    private ObjectId creadoPorId;
+    private ObjectId cerradoPorId;
+    
+    
+    private ObjectId asignadoId;
+>>>>>>> 434f1ac0d2237456d3ba4fcf93a840a5c9c2a0e0
 
 }
