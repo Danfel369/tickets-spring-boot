@@ -5,6 +5,8 @@ import java.time.LocalDateTime;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
+import org.springframework.data.mongodb.core.index.TextIndexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import lombok.AllArgsConstructor;
@@ -19,18 +21,29 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Ticket {
     @Id
-    private ObjectId TicketId;
+    private ObjectId ticketId;
     
     @CreatedDate
     private LocalDateTime fechaCreacion;
-    @CreatedDate
+    
     private LocalDateTime fechaCierre;
 
+    @TextIndexed
     private String nombreCaso;
+    
+    @Indexed
     private Estado estadoTicket;
+    
+    @Indexed
     private Prioridad prioridadTicket;
-    private String creadoPor;
-    private String cerradoPor;
-    private String asignado;
+
+    @Indexed
+    private ObjectId creadoPorId;
+    
+    @Indexed
+    private ObjectId cerradoPorId;
+    
+    @Indexed
+    private ObjectId asignadoAId;
 
 }

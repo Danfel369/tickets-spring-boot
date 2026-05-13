@@ -2,6 +2,7 @@ package com.proyecto.tickets.model;
 
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import lombok.AllArgsConstructor;
@@ -17,9 +18,12 @@ import lombok.NoArgsConstructor;
 public class Usuario {
     @Id
     private ObjectId usuarioId;
+
     private String nombre;
     private String apellido;
+
+    @Indexed(unique = true)
     private String correo;
-    private Rol rol;
+
     private String fotoPerfil;
 }
