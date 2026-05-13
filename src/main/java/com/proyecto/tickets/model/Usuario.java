@@ -24,9 +24,5 @@ public class Usuario {
 
     @Indexed(unique = true)
     private String correo;
-<<<<<<< HEAD
-
-=======
->>>>>>> 434f1ac0d2237456d3ba4fcf93a840a5c9c2a0e0
     private String fotoPerfil;
 }
