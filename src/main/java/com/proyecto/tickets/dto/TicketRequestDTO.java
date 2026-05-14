@@ -1,10 +1,9 @@
 package com.proyecto.tickets.dto;
 
-import java.time.LocalDate;
-
-import org.bson.types.ObjectId;
+import com.proyecto.tickets.model.Prioridad;
 
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
 @Data
@@ -15,9 +14,9 @@ public class TicketRequestDTO {
     private String ticketName;
 
     @NotBlank
-    private ObjectId ticketCreatedBy;
+    private String ticketCreatedBy;
 
-    @NotBlank
-    private LocalDate ticketDateCreation;
+    @NotNull
+    private Prioridad ticketPriority;
 
 }

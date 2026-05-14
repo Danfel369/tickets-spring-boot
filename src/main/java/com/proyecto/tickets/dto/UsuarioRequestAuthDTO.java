@@ -4,7 +4,7 @@ import jakarta.validation.constraints.NotBlank;
 
 import lombok.Data;
 
-    @Data
+@Data
 
 public class UsuarioRequestAuthDTO {
 
